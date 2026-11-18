@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CST423 Cloud Computing – Module-wise Questions</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mu:#5d6577;--bd:#e2e5ee;--ac:#3b5bdb;--hot:#e8590c;--hotbg:#fff1e6;--rep:#2b8a3e;--repbg:#ebfbee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141b;--card:#1b1e28;--tx:#e8eaf2;--mu:#98a0b3;--bd:#2c3040;--ac:#7c9cff;--hot:#ff9a52;--hotbg:#3a2616;--rep:#69db7c;--repbg:#16301d}}
+:root[data-theme="dark"]{--bg:#12141b;--card:#1b1e28;--tx:#e8eaf2;--mu:#98a0b3;--bd:#2c3040;--ac:#7c9cff;--hot:#ff9a52;--hotbg:#3a2616;--rep:#69db7c;--repbg:#16301d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:22px 16px 8px;max-width:900px;margin:auto}
+h1{margin:0 0 4px;font-size:22px}
+.sub{color:var(--mu);font-size:13px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;padding:10px 16px;border-bottom:1px solid var(--bd)}
+.bar>div{max-width:900px;margin:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+button{font:inherit;font-size:13px;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:6px 12px;border-radius:20px;cursor:pointer}
+button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+label{font-size:13px;color:var(--mu);margin-left:auto;display:flex;gap:6px;align-items:center;cursor:pointer}
+main{max-width:900px;margin:auto;padding:14px 16px 40px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--mu);margin-bottom:12px}
+.topic{background:var(--card);border:1px solid var(--bd);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.topic.hot{border:2px solid var(--hot)}
+.th{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 14px;flex-wrap:wrap;background:var(--bg)}
+.topic.hot .th{background:var(--hotbg)}
+.th b{font-size:15px}
+.badge{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:12px;white-space:nowrap}
+.b-hot{background:var(--hot);color:#fff}
+.b-rep{background:var(--repbg);color:var(--rep)}
+.b-one{background:var(--bg);color:var(--mu);border:1px solid var(--bd)}
+.q{display:flex;gap:10px;padding:9px 14px;border-top:1px solid var(--bd);align-items:flex-start}
+.q .t{flex:1}
+.meta{font-size:12px;color:var(--mu)}
+.mk{font-weight:700;color:var(--ac);white-space:nowrap;font-size:13px;min-width:34px;text-align:right}
+.yr{font-size:11px;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:1px 6px;margin-right:6px;white-space:nowrap}
+.mhead{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin:4px 0 12px}
+.note{font-size:12px;color:var(--mu);margin-top:20px}
+:root{--bg:#f4f2ff;--card:#fff;--tx:#1e1b3a;--mu:#6b6789;--bd:#e4e0fa;--ac:#6d4aff;--ac2:#ec4899;--hot:#f97316;--hotbg:#fff3e6;--rep:#0f9d75;--repbg:#e1f8ef;--a:#0d9488;--abg:#e0f7f5;--b:#6d4aff;--bbg:#ede9ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0d1f;--card:#1a1733;--tx:#eeeafc;--mu:#a39fc4;--bd:#2f2a52;--ac:#9b82ff;--ac2:#f472b6;--hot:#ffa14a;--hotbg:#3a2412;--rep:#4fe0b0;--repbg:#0f2f26;--a:#3dd6d3;--abg:#0d2f31;--b:#a18bff;--bbg:#231d4a}}
+:root[data-theme="dark"]{--bg:#0f0d1f;--card:#1a1733;--tx:#eeeafc;--mu:#a39fc4;--bd:#2f2a52;--ac:#9b82ff;--ac2:#f472b6;--hot:#ffa14a;--hotbg:#3a2412;--rep:#4fe0b0;--repbg:#0f2f26;--a:#3dd6d3;--abg:#0d2f31;--b:#a18bff;--bbg:#231d4a}
+body{background:radial-gradient(900px 400px at 10% -10%,color-mix(in srgb,var(--ac) 18%,transparent),transparent),radial-gradient(700px 400px at 100% 0,color-mix(in srgb,var(--ac2) 14%,transparent),transparent),var(--bg);background-attachment:fixed}
+h1{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .6s both}
+.bar{background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(10px)}
+button{transition:transform .2s,background .25s,box-shadow .25s,color .25s}
+button:hover{transform:translateY(-2px);box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 25%,transparent)}
+button.on{background:linear-gradient(90deg,var(--ac),var(--ac2));border-color:transparent;box-shadow:0 4px 14px color-mix(in srgb,var(--ac) 40%,transparent)}
+.topic{border-radius:14px;transition:transform .25s,box-shadow .25s;animation:up .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*70ms)}
+.topic:hover{transform:translateY(-3px);box-shadow:0 10px 26px color-mix(in srgb,var(--c) 22%,transparent)}
+.topic.hot{border:2px solid var(--hot)}
+.topic.hot .th{background:linear-gradient(90deg,var(--hotbg),transparent)}
+.th{background:linear-gradient(90deg,var(--cb),transparent);border-left:4px solid var(--c)}
+.topic.hot .th{border-left-color:var(--hot)}
+.q{transition:background .2s;animation:slide .45s ease both;animation-delay:calc(var(--i,0)*70ms + var(--j,0)*45ms + 160ms)}
+.q:hover{background:color-mix(in srgb,var(--c) 7%,transparent)}
+.mk{background:var(--cb);color:var(--c);padding:2px 9px;border-radius:10px;min-width:0;align-self:center}
+.yr{background:var(--cb);color:var(--c);border:0;font-weight:600}
+.b-hot{background:linear-gradient(90deg,#f97316,#ef4444);animation:glow 2.2s infinite}
+.b-rep{background:var(--repbg);color:var(--rep)}
+.sec{margin-bottom:30px}
+.sec.a{--c:var(--a);--cb:var(--abg)}
+.sec.b{--c:var(--b);--cb:var(--bbg)}
+.sh{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin:6px 0 12px;padding:10px 14px;border-radius:12px;background:var(--cb);color:var(--c);font-weight:700;animation:up .5s both}
+.sh small{font-weight:600;opacity:.85}
+@keyframes up{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes slide{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(249,115,22,.5)}60%{box-shadow:0 0 0 7px rgba(249,115,22,0)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.grp{margin-bottom:22px;border-radius:16px;border:1px solid var(--bd);background:color-mix(in srgb,var(--card) 60%,transparent);overflow:hidden;animation:up .5s both}
+.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 16px;font-weight:700;font-size:16px;transition:filter .2s}
+.grp>summary:hover{filter:brightness(.97)}
+.grp>summary::-webkit-details-marker{display:none}
+.grp>summary small{display:block;font-weight:500;font-size:12px;color:var(--mu)}
+.grp>summary em{font-style:normal;font-size:12px;font-weight:700;padding:4px 10px;border-radius:12px;background:var(--bg);margin-left:auto;white-space:nowrap}
+.grp>summary::after{content:"▾";font-size:18px;transition:transform .3s}
+.grp[open]>summary::after{transform:rotate(180deg)}
+.grp.rep>summary{background:linear-gradient(90deg,var(--hotbg),transparent)}
+.grp.one>summary{background:linear-gradient(90deg,var(--bbg),transparent)}
+.gb{padding:12px 12px 2px}
+.grp[open]>.gb{animation:up .4s both}
+.blk{margin-bottom:22px;border-radius:18px;border:2px solid var(--c);background:var(--card);overflow:hidden;animation:up .5s both;box-shadow:0 8px 24px color-mix(in srgb,var(--c) 18%,transparent)}
+.blk.a{--c:var(--a);--cb:var(--abg)}
+.blk.b{--c:var(--hot);--cb:var(--hotbg)}
+.blk>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:16px 18px;font-weight:800;font-size:17px;color:#fff;background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 55%,var(--ac2)))}
+.blk>summary::-webkit-details-marker{display:none}
+.blk>summary small{display:block;font-weight:500;font-size:12px;opacity:.9}
+.blk>summary em{font-style:normal;font-size:12px;font-weight:700;padding:4px 11px;border-radius:12px;background:rgba(255,255,255,.25);margin-left:auto;white-space:nowrap}
+.blk>summary::after{content:"▾";font-size:20px;transition:transform .3s}
+.blk[open]>summary::after{transform:rotate(180deg)}
+.blk[open]>.gb{animation:up .4s both}
+.row{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border-radius:12px;margin-bottom:6px;border:1px solid var(--bd);transition:transform .2s,background .2s;animation:slide .4s ease both;animation-delay:calc(var(--i,0)*35ms)}
+.row:hover{transform:translateX(4px);background:var(--cb)}
+.row.hot{border-color:var(--hot);background:var(--hotbg)}
+.rn{min-width:26px;height:26px;border-radius:50%;background:var(--cb);color:var(--c);font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center}
+.rb{flex:1}
+.rt{font-weight:600}
+.rc{margin-top:5px;display:flex;gap:5px;flex-wrap:wrap}
+.rc .yr{background:var(--cb);color:var(--c);border:0;font-weight:600;margin:0}
+.rf{white-space:nowrap}
+.gb{padding:12px 12px 6px}
+:root{--bg:#f4f6fa;--card:#fff;--tx:#1f2937;--mu:#64748b;--bd:#e1e6ef;--ac:#1e40af;--ac2:#0f766e;--hot:#b45309;--hotbg:#fdf5e6;--rep:#047857;--repbg:#e5f5ee;--a:#0f766e;--abg:#e4f2f0;--b:#1e40af;--bbg:#e8eefb}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--card:#111a2e;--tx:#e5e9f2;--mu:#94a3b8;--bd:#223049;--ac:#7aa2ff;--ac2:#5eead4;--hot:#d97706;--hotbg:#2a2110;--rep:#4ade9d;--repbg:#0f2a20;--a:#0f9488;--abg:#0f2b2a;--b:#3b66d6;--bbg:#16233f}}
+:root[data-theme="dark"]{--bg:#0b1220;--card:#111a2e;--tx:#e5e9f2;--mu:#94a3b8;--bd:#223049;--ac:#7aa2ff;--ac2:#5eead4;--hot:#d97706;--hotbg:#2a2110;--rep:#4ade9d;--repbg:#0f2a20;--a:#0f9488;--abg:#0f2b2a;--b:#3b66d6;--bbg:#16233f}
+body{background:var(--bg)}
+h1{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text}
+button.on{background:var(--ac);color:#fff;box-shadow:0 4px 12px color-mix(in srgb,var(--ac) 35%,transparent)}
+:root:not([data-theme="light"]) button.on{color:#0b1220}
+.blk>summary{background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 70%,#0b1220))}
+.blk.b{--c:var(--hot)}
+.rc .yr{color:var(--tx)}
+.rn{color:var(--tx)}
+.b-hot{background:var(--hot);animation:none}
+#back{margin-top:10px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:8px}
+.sc{text-align:left;padding:22px;border-radius:16px;border:1px solid var(--bd);background:var(--card);display:flex;flex-direction:column;gap:6px;animation:up .5s both;font-size:15px}
+.sc:hover{border-color:var(--ac);box-shadow:0 10px 26px color-mix(in srgb,var(--ac) 18%,transparent)}
+.sc b{font-size:19px}.sc small{color:var(--mu);font-size:13px}
+.tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:var(--bbg);color:var(--ac)}
+.sc{--k:#1d4ed8;border-top:6px solid var(--k);background:linear-gradient(160deg,color-mix(in srgb,var(--k) 12%,var(--card)),var(--card) 65%)}
+.sc:nth-child(2){--k:#047857}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sc{--k:#7aa2ff}:root:not([data-theme="light"]) .sc:nth-child(2){--k:#4ade9d}}
+.sc .tag{background:var(--k);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sc .tag{color:#0b1220}}
+.sc b{color:var(--k)}
+.sc:hover{border-color:var(--k);box-shadow:0 12px 28px color-mix(in srgb,var(--k) 25%,transparent)}
+</style></head><body>
+<header><h1>CST423 Cloud Computing – Module-wise Questions</h1>
+<div class="sub">KTU question papers: 9 papers, Dec 2022 to Nov 2025. Questions grouped by topic; most repeated topics first.</div></header>
+<div class="bar"><div id="tabs"></div></div>
+<main>
+<div class="mhead"><div class="legend"><span><span class="badge b-hot">🔥 Most repeated</span></span><span><span class="badge b-rep">Repeated</span></span><span><span class="badge b-one">Asked once</span></span></div>
+<label><input type="checkbox" id="only"> Repeated topics only</label></div>
+<div id="out"></div>
+<p class="note">Part A (3-mark) questions carry no module heading in the papers; they are placed under the module their topic belongs to. Repeat count = number of different papers (out of 4) that asked the topic. Q numbers: e.g. 11a = Part B, Q11 (a).</p>
+</main>
+<script>
+var Y=["Dec 2023","Apr 2025","Nov 2024","Nov 2025","Dec 2022","May 2023","May 2024","Jun 2024","May 2025"],R=[2,6,5,8,0,1,3,4,7];
+// [paper, qno, text, marks]
+var D={
+"Module I – Introduction & Cloud Models":[
+["NIST cloud reference model / architecture",[[0,"11a","Explain NIST reference cloud model with neat diagram",8],[1,"12a","Discuss NIST cloud computing reference model with a neat diagram",10],[2,"11a","Discuss the NIST cloud computing reference model with a neat diagram",10],[3,"11a","With a diagram, explain NIST Cloud Computing Reference Architecture",8]]],
+["Service models (IaaS / PaaS / SaaS)",[[0,"2","Why cloud delivery models can be referred to as cloud service delivery model?",3],[0,"11b","How IaaS provides cloud consumers a high level of control and responsibility?",6],[1,"11b","Main characteristics of a Platform-as-a-Service solution",4],[2,"2","Key features of SaaS with example",3],[3,"12b","Define cloud services. Explain IaaS, PaaS, SaaS with one example each",8]]],
+["Characteristics, benefits & challenges of cloud",[[0,"12a","List the benefits and challenges of cloud computing",6],[1,"11a","Explain the characteristics, benefits and challenges of cloud computing",10],[2,"12a","Explain the characteristics, benefits and challenges of cloud computing",10]]],
+["Cloud deployment models (public / private / hybrid)",[[0,"12b","Classify various types of cloud",8],[2,"11b","Differentiate public and private clouds in terms of flexibility",4],[2,"12b","Justify: hybrid cloud is a combination of two or more deployment models, with example",4],[3,"11b","Briefly explain the different types of cloud deployment models",6]]],
+["Traditional vs cloud computing",[[0,"1","Compare traditional computing and cloud computing",3],[1,"1","What are the limitations of traditional computing?",3]]],
+["Cluster / Grid / Distributed vs Cloud",[[2,"1","Differentiate between cluster computing and grid computing",3],[3,"2","How is cluster computing different from grid computing?",3],[3,"12a","Compare Grid, Distributed and Cloud Computing",6]]],
+["Horizontal vs vertical scaling",[[1,"2","Compare horizontal scaling and vertical scaling in cloud computing",3]]],
+["Organizational & trust boundaries",[[1,"12b","Explain organizational boundaries and trust boundaries in cloud computing",4]]]
+],
+"Module II – Virtualization":[
+["Hypervisor types & Xen",[[0,"14b","What is Xen? Discuss its elements for virtualization",8],[1,"3","Which type of virtualization is used in Xen? Explain Xen architecture",3],[1,"13a","What is hypervisor? Discuss types of hypervisors",9],[2,"3","What is hypervisor? Explain architecture of Xen hypervisor",3],[3,"4","Difference between Type 1 and Type 2 hypervisor",3]]],
+["Non-virtualized vs virtualized environments",[[0,"13a","Compare non virtual and virtual machine environments",6],[1,"13b","Differentiate non-virtualized and virtualized machine environments",5],[3,"1","Difference between a traditional computer and a virtual machine",3]]],
+["Pros & cons / advantages of virtualization",[[0,"4","Discuss pros and cons of virtualization",3],[1,"14a","Define virtualization. List and explain advantages and disadvantages",10],[3,"14b","Pros and cons of virtualization (+ Full vs Para)",7]]],
+["Full vs Para-virtualization",[[0,"13b","Explain Para-virtualization with a neat diagram",8],[2,"13b","Compare Full, Para and Hardware Assisted Virtualization",6],[3,"14b","Differentiate Full Virtualization and Para-Virtualization (+ pros/cons)",7]]],
+["Virtualization techniques – emulation, interpretation, binary translation",[[0,"3","What is emulation virtualization?",3],[2,"13a","Various techniques used in machine virtualization",8],[3,"13b","Briefly explain emulation, interpretation and binary translation",6]]],
+["Storage virtualization",[[0,"14a","Explain storage virtualization with a diagram",6],[3,"13a","Explain storage virtualization with a neat sketch",8]]],
+["Operating-system level virtualization",[[2,"14b","OS level virtualization with a neat diagram",5],[3,"14a","Model of OS level virtualization; advantages and limitations",7]]],
+["Types of Virtual Machines",[[2,"4","Explain the various types of Virtual Machines",3],[3,"3","List and discuss main types of Virtual Machines",3]]],
+["VMware elements",[[2,"14a","What is VMware? Discuss its elements for virtualization",9]]],
+["Implementation levels of virtualization",[[1,"14b","Explain various implementation levels of virtualization",4]]],
+["Network level virtualization",[[1,"4","Explain the concept of network level virtualization",3]]]
+],
+"Module III – Cloud Enabling Tech, Hadoop & Provisioning":[
+["MapReduce / Hadoop / HDFS",[[0,"16b","Explain components of MapReduce architecture, advantages with example",8],[1,"16a","Explain HDFS; running of a job in Hadoop with diagram",8],[2,"16a","Major functions of MapReduce; logical data flow with example",9],[3,"6","Explain HDFS and its key characteristics",3],[3,"15a","MapReduce algorithm with diagram; word count",8]]],
+["Eucalyptus / OpenNebula",[[0,"6","Explain OpenNebula cloud provider",3],[0,"16a","Draw Eucalyptus architecture and explain key functionalities",6],[1,"6","Explain key features of Eucalyptus",3],[2,"16b","Explain key features of Eucalyptus",5],[3,"7","Short note on OpenNebula",3]]],
+["Data centre technologies",[[0,"15a","List the data centre technology components. Explain any two",6],[2,"15b","Explain data centre technologies enabling cloud",8],[3,"16a","Technologies used in data centres and their role in cloud services",6]]],
+["Broadband networks, internet & web technology",[[1,"15a","Explain broadband networks and internet architecture",10],[2,"15a","Fundamental elements of web technology architecture of the web",6],[3,"15b","Role of broadband networks / internet and web technology in cloud",6]]],
+["Multitenancy vs virtualization",[[0,"5","Differentiate Multitenancy and Virtualization",3],[1,"15b","Differentiate between multitenancy and virtualization",4],[2,"6","Characteristics of Multitenant technology",3]]],
+["Static vs dynamic resource provisioning",[[0,"15b","Compare static and dynamic resource provisioning, each with example",8],[3,"5","What is dynamic resource provisioning? Explain",3],[3,"16b","Static vs dynamic approach of resource provisioning in VMs",8]]],
+["Pig Latin",[[1,"16b","What is Pig Latin? Major Pig Latin data types",6],[2,"5","Short notes on Pig Latin high level language",3]]],
+["On-premise vs cloud-based internetworking",[[1,"5","Differentiate on-premise and cloud-based internetworking",3]]]
+],
+"Module IV – Cloud Security":[
+["Threats, threat agents & security mechanisms",[[0,"17a","Types of internal security breaches; steps to reduce them",6],[1,"17a","How security policies and mechanisms counter threats, vulnerabilities and risks",9],[2,"8","List the various types of threat agents",3],[2,"17a","Describe various kinds of cloud security threats in detail",10],[3,"17a","Role of a threat agent and risks caused by threat agents",7]]],
+["VM / hypervisor (VMM) security",[[0,"8","What are VMM and VM-based security threats?",3],[1,"7","Hypervisor-based threats vs VM-based threats",3],[2,"18a","How virtual machine security can be achieved in cloud",9],[3,"18b","How virtual machine security can be achieved in cloud",7]]],
+["Security risks of shared images",[[0,"18b","Security risks posed by shared images with example",6],[1,"8","Security risks posed by shared images with examples",3],[3,"18a","Security threat posed by shared images in detail",7]]],
+["Operating system / management OS security",[[0,"17b","Explain operating system security in cloud computing",8],[1,"17b","How OS level security can be achieved in cloud",5],[2,"18b","Security risks posed by management OS with examples",5]]],
+["Access control & Identity Management",[[1,"18b","What is access control? Differentiate MAC and RBAC",6],[3,"8","Differentiate between MAC and DAC",3],[3,"17b","Key functions and benefits of Identity and Access Management",7]]],
+["Confidentiality, integrity, availability",[[0,"7","What are Authenticity and Availability in security?",3],[2,"7","Note on confidentiality, integrity and availability",3]]],
+["Risk management",[[0,"18a","What is risk management? Types of ongoing risk management process",8]]],
+["Infrastructure security",[[1,"18a","Different categories of infrastructure security in cloud",8]]],
+["Why security is harder in cloud",[[2,"17b","Why is it harder to establish security in the cloud?",4]]]
+],
+"Module V – AWS, Azure & Google Cloud":[
+["Google App Engine",[[0,"20a","Discuss the core components of Google App Engine",8],[1,"20a","Google App Engine for PaaS with neat diagram",9],[2,"20b","Core components of Google App Engine",5],[3,"20b","Core components of Google App Engine",7]]],
+["Amazon storage (S3, EBS, storage types)",[[0,"9","Differentiate Amazon S3 and Amazon EBS",3],[0,"19b","Explain the architecture of Amazon S3",6],[1,"19a","Storage services in cloud offered as IaaS and SaaS. Explain",8],[2,"19b","Key concepts of Amazon Storage services",5],[3,"10","3 main storage types in AWS. Explain",3]]],
+["Amazon EC2 / AMI",[[0,"19a","What is EC2? Explain its features",8],[1,"9","What is Amazon Machine Image (AMI)?",3],[2,"9","What is Amazon EC2?",3]]],
+["Azure storage services (Blobs etc.)",[[0,"10","List the storage services offered by Microsoft Azure",3],[1,"10","Explain Blobs storage service of Azure",3],[3,"19b","Explain the four services offered by Azure storage",7]]],
+["Azure platform architecture",[[2,"20a","Microsoft Azure platform architecture with neat diagram",9],[3,"20a","Azure Cloud Computing Platform Architecture with neat diagram",7]]],
+["AWS ecosystem / offerings",[[2,"19a","Illustrate Amazon Web Services ecosystem with diagram",9],[3,"19a","Explain Amazon Web Services offerings",7]]],
+["Google Cloud storage & database services",[[2,"10","Discuss Google Cloud storage",3],[3,"9","List database services offered by Google Cloud",3]]],
+["Amazon SimpleDB vs RDS",[[1,"19b","Differentiate Amazon SimpleDB and Amazon RDS",6]]],
+["Azure compute services",[[1,"20b","Discuss the compute services offered by Microsoft Azure",5]]],
+["Google Docs & Google Drive",[[0,"20b","Write notes on Google Docs and Google Drive",6]]]
+]};
+var names=Object.keys(D),cur=0,tabs=document.getElementById("tabs"),out=document.getElementById("out"),only=document.getElementById("only");
+function cnt(t){var s={};t[1].forEach(function(q){s[q[0]]=1});return Object.keys(s).length}
+function esc(s){return s.replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function render(){
+ tabs.innerHTML="";
+ names.forEach(function(n,i){var b=document.createElement("button");b.textContent=n.split(" – ")[0];b.title=n;if(i===cur)b.className="on";b.onclick=function(){cur=i;render();window.scrollTo(0,0)};tabs.appendChild(b)});
+ var ts=D[names[cur]].slice().sort(function(a,b){return cnt(b)-cnt(a)||b[1].length-a[1].length});
+ var max=cnt(ts[0]),h="<h2 style='font-size:17px;margin:0 0 10px'>"+names[cur]+"</h2>";
+ ts.forEach(function(t){
+  var c=cnt(t);if(only.checked&&c<2)return;
+  var hot=c===max&&c>1,tot=t[1].reduce(function(a,q){return a+q[3]},0);
+  var bd=hot?"<span class='badge b-hot'>🔥 Most repeated · "+c+"/4 papers</span>":c>1?"<span class='badge b-rep'>Repeated · "+c+"/4 papers</span>":"<span class='badge b-one'>Asked once</span>";
+  h+="<section class='topic"+(hot?" hot":"")+"'><div class='th'><b>"+esc(t[0])+"</b>"+bd+"</div>";
+  t[1].slice().sort(function(a,b){return a[0]-b[0]}).forEach(function(q){
+   h+="<div class='q'><div class='t'><span class='yr'>"+Y[q[0]]+"</span><span class='meta'>Q"+q[1]+" · "+(q[2].length&&parseInt(q[1])<=10?"Part A":"Part B")+"</span><div>"+esc(q[2])+"</div></div><div class='mk'>"+q[3]+" m</div></div>"});
+  h+="</section>"});
+ out.innerHTML=h||"<p>No repeated topics.</p>";
+}
+render=function(){
+ tabs.innerHTML="";
+ names.forEach(function(n,i){var b=document.createElement("button");b.textContent=n.split(" – ")[0];b.title=n;if(i===cur)b.className="on";b.onclick=function(){cur=i;render();window.scrollTo(0,0)};tabs.appendChild(b)});
+ var all=[];D[names[cur]].forEach(function(t){t[1].forEach(function(q){all.push([t[0],q])})});
+ var secs=[{k:"a",t:"Part A · 3-mark questions",f:function(q){return q[3]===3}},{k:"b",t:"Part B · Long-answer questions",f:function(q){return q[3]!==3}}];
+ var h="<h2 style='font-size:18px;margin:0 0 12px'>"+names[cur]+"</h2>",i=0;
+ [{id:"rep",t:"🔥 Learn first · Repeated topics",d:"Asked in 2 or more papers",f:function(t){return cnt(t)>1},open:0},{id:"one",t:"📚 Other questions",d:"Asked only once",f:function(t){return cnt(t)===1},open:0}].forEach(function(G){
+ if(only.checked&&G.id==="one")return;
+ var st=h.length,gq=0,gt=0;
+ secs.forEach(function(s){
+  var g={},ord=[],n=0,tot=0;
+  all.forEach(function(x){if(!s.f(x[1]))return;if(!g[x[0]]){g[x[0]]=[x[0],[]];ord.push(g[x[0]])}g[x[0]][1].push(x[1]);n++;tot+=x[1][3]});
+  var ts=ord.sort(function(a,b){return cnt(b)-cnt(a)||b[1].length-a[1].length});
+  ts=ts.filter(G.f);n=0;tot=0;ts.forEach(function(t){t[1].forEach(function(q){n++;tot+=q[3]})});gq+=n;gt+=tot;
+  if(!ts.length)return;
+  var max=cnt(ts[0]);
+  h+="<div class='sec "+s.k+"'><div class='sh' style='--i:"+Math.min(i,10)+"'><span>"+s.t+"</span><small>"+n+" questions · "+tot+" marks total</small></div>";
+  ts.forEach(function(t){
+   var c=cnt(t),hot=c===max&&c>1;
+   var bd=hot?"<span class='badge b-hot'>🔥 Most repeated · "+c+"/"+Y.length+" papers</span>":c>1?"<span class='badge b-rep'>Repeated · "+c+"/"+Y.length+" papers</span>":"<span class='badge b-one'>Asked once</span>";
+   i++;
+   h+="<section class='topic"+(hot?" hot":"")+"' style='--i:"+Math.min(i,10)+"'><div class='th'><b>"+esc(t[0])+"</b>"+bd+"</div>";
+   t[1].slice().sort(function(a,b){return R[a[0]]-R[b[0]]}).forEach(function(q,j){
+    h+="<div class='q' style='--i:"+Math.min(i,10)+";--j:"+j+"'><div class='t'><span class='yr'>"+Y[q[0]]+"</span><span class='meta'>Q"+q[1]+"</span><div>"+esc(q[2])+"</div></div><div class='mk'>"+q[3]+" m</div></div>"});
+   h+="</section>"});
+  h+="</div>"});
+ if(h.length>st){h=h.slice(0,st)+"<details class='grp "+G.id+"'"+(G.open?" open":"")+"><summary><span>"+G.t+"<small>"+G.d+"</small></span><em>"+gq+" Qs · "+gt+" marks</em></summary><div class='gb'>"+h.slice(st)+"</div></details>"}
+ });
+ out.innerHTML=h||"<p>No repeated topics.</p>";
+};
+function A(m,k,e){var L=D[names[m]],t=null;L.forEach(function(x){if(!t&&x[0].indexOf(k)>-1)t=x});if(!t){t=[k,[]];L.push(t)}e.forEach(function(q){t[1].push(q)})}
+A(0,"NIST",[[4,"11b","Outline NIST cloud computing model with suitable diagrams",9],[5,"11a","With diagram, explain NIST Cloud Computing Reference Architecture",7],[6,"11b","Discuss the cloud computing reference model",10],[7,"11a","Outline interactions between actors in NIST model with diagram",5],[8,"1","How does NIST define cloud computing?",3],[8,"11a","With diagram, explain NIST Cloud Computing Reference Architecture",7]]);
+A(0,"Service models",[[4,"12a","Basic components of an IaaS-based solution",5],[5,"2","Define XaaS",3],[5,"11b","Explain PaaS, SaaS and IaaS with an example",7],[6,"2","Key benefits of IaaS; any two IaaS providers",3],[6,"12a","Explain PaaS in terms of ready to use environment",6],[7,"12a","Basic components of a SaaS based solution",5],[8,"12b","Explain various cloud delivery models with examples",6]]);
+A(0,"Characteristics",[[4,"1","Define cloud computing; essential characteristics",3],[4,"11a","Summarize the challenges of cloud computing",5],[5,"12a","How cloud reduces time to market and cuts capital expenses?",8],[5,"12b","Cloud elasticity vs scalability for a festive-season shopping site",6],[7,"2","Summarize essential characteristics of cloud computing",3],[8,"2","List any three benefits and challenges of cloud computing",3]]);
+A(0,"deployment models",[[4,"12b","Discuss hybrid cloud architecture with example",9],[6,"12b","Discuss the various types of clouds",8],[7,"1","Hybrid cloud is a combination of deployment models; justify with example",3],[7,"11b","Community clouds: implementation and advantage in research",9],[8,"11b","List and explain various cloud deployment models",7]]);
+A(0,"Traditional vs cloud",[[6,"11a","Compare Traditional computing and cloud computing",4]]);
+A(0,"Cluster / Grid",[[4,"2","Grid computing as predecessor of cloud computing; justify",3],[5,"1","Differentiate Grid computing and Cluster computing",3],[6,"1","Why is Grid computing the predecessor of cloud computing?",3],[7,"12b","Compare cluster, grid and cloud computing models",9],[8,"12a","Compare Grid, Cluster and Cloud Computing",8]]);
+A(1,"Hypervisor",[[4,"3","Design requirements for Virtual Machine Monitor (VMM)",3],[4,"14b","Hypervisor-based virtualization approaches with examples",8],[5,"13a","Need for virtualization in cloud; compare Type 1 and Type 2 hypervisor",8],[7,"4","Why is a hypervisor also called virtual machine monitor?",3],[8,"3","What is a hypervisor? Is Oracle VirtualBox bare metal?",3],[8,"13b","Define virtualization; role of VMM in virtualization",7]]);
+A(1,"VMware",[[6,"14b","What is VMware? Compare XenServer and VMware",6]]);
+A(1,"Non-virtualized",[[4,"13a","Conventional vs virtualized computing system",6],[6,"13a","Compare virtualized and non-virtualized machine environments",6]]);
+A(1,"Pros & cons",[[4,"13b","Summarize various advantages of virtualization",8],[5,"14a","What is virtualization? List any 4 pros and cons",8],[6,"3","Define virtualization. Mention any four types",3],[7,"14a","Define virtualization; downsides of virtualization",6]]);
+A(1,"Full vs Para",[[5,"13b","Compare and contrast Full and Para Virtualization",6],[6,"4","Compare Full virtualization and Paravirtualization",3],[6,"13b","Explain full virtualization with a neat diagram",8],[7,"13b","Differentiate full and para virtualization",6],[8,"14a","Explain full virtualization and paravirtualization",6]]);
+A(1,"Virtualization techniques",[[5,"14b","Emulation, interpretation and binary translation",6],[7,"13a","Two techniques for server or machine virtualization",8],[8,"4","Why is binary translation used in virtualization?",3],[8,"14b","Machine virtualization, emulation, interpretation, simulation",8]]);
+A(1,"Storage virtualization",[[6,"14a","Explain storage virtualization with a neat sketch",8]]);
+A(1,"Operating-system",[[5,"4","Explain OS Level Virtualization",3],[7,"14b","Model of OS level virtualization; advantages and limitations",8]]);
+A(1,"Types of Virtual Machines",[[4,"14a","Differentiate process VM and system VM",6],[7,"3","Differentiate process VM and system VM",3],[8,"13a","Differentiate process VM and System VM with examples",7]]);
+A(1,"Desktop virtualization",[[5,"3","What is desktop virtualization? Mention 2 advantages",3]]);
+A(1,"Resource abstraction through virtualization",[[4,"4","Meaning of resource abstraction through virtualization",3]]);
+A(2,"MapReduce",[[4,"6","Explain HDFS architecture",3],[4,"15a","Hadoop MapReduce program to count word occurrences",6],[4,"16b","Major tasks of MapReduce; logical data flow with example",8],[5,"16a","Write a Word Count program in Hadoop using MapReduce",8],[6,"16b","Discuss Hadoop Distributed File System and its features",6],[7,"6","Core components of Hadoop architecture",3],[7,"15b","Major functions of MapReduce; logical data flow",8],[7,"16a","Hadoop MapReduce word count program",6],[8,"6","What is HDFS? Is concurrent write into HDFS possible?",3],[8,"16a","Explain architecture of MapReduce in Hadoop",7],[8,"16b","Write a Word Count program in Hadoop using MapReduce",7]]);
+A(2,"Apache Spark accumulators",[[5,"6","Role of accumulators in Apache Spark",3]]);
+A(2,"Eucalyptus",[[5,"15a","Architecture of Eucalyptus Cloud with mode of operation",7],[6,"6","Functionalities of Eucalyptus cloud provider",3],[6,"16a","Architecture of OpenStack cloud provider; main features",8],[7,"16b","Compare open-source software platforms for private cloud",8],[8,"15b","What is OpenStack? Explain 3 key components",8]]);
+A(2,"Data centre",[[5,"16b","Explain any 3 Cloud Enabling Technologies",6],[6,"15b","List data centre technology components; explain any two",6],[8,"15a","Explain any 3 Cloud Enabling Technologies",6]]);
+A(2,"Broadband",[[6,"15a","Explain broadband networks and internet architecture",8],[7,"15a","Industry standards of first generation Web service technologies",6]]);
+A(2,"internetworking",[[4,"5","Two fundamental components of internetworking architecture",3]]);
+A(2,"Multitenancy",[[4,"16a","Common characteristics of multitenant applications",6],[7,"5","Distinguish between multi-tenancy and virtualization",3]]);
+A(2,"provisioning",[[4,"15b","Static vs dynamic resource provisioning in VMs",8],[5,"15b","Resource provisioning techniques in cloud",7],[6,"5","What is dynamic resource provisioning? Explain",3]]);
+A(2,"Pig Latin",[[5,"5","What is Pig Latin? How to upload abc.csv file to Pig?",3],[8,"5","What are the major Pig Latin data types?",3]]);
+A(3,"Threats, threat",[[4,"17b","Common threats and vulnerabilities in cloud with examples",8],[4,"18b","Role of a threat agent and risks caused by threat agents",8],[6,"18a","What are threat agents? Different types of threat agents",8],[7,"17b","Role of a threat agent and risks caused",8],[7,"18b","Common threats and vulnerabilities with examples",8],[8,"17b","List and explain any 7 cloud security threats/risks",7]]);
+A(3,"VM / hypervisor",[[4,"18a","Different methods for providing Virtual Machine Security",6],[7,"7","Different types of hypervisor-based threats",3]]);
+A(3,"shared images",[[4,"17a","Security risks posed by shared images",6],[5,"17b","Security risks posed by shared images",7],[6,"17b","Security risks of shared images with suitable example",8],[8,"17a","Security risks posed by shared images",7]]);
+A(3,"Operating system",[[6,"18b","Explain operating system security in cloud computing",6]]);
+A(3,"Physical system security",[[6,"8","Explain security of a physical system",3]]);
+A(3,"Access control",[[4,"8","Differentiate MAC and DAC",3],[5,"7","Differentiate MAC and DAC",3],[5,"17a","Explain Identity and Access Management in cloud",7],[7,"17a","MAC vs DAC with suitable example",6],[7,"18a","Differentiate Single sign-on (SSO) and Federated Identity management",6],[8,"18a","Explain Identity and Access Management in cloud",7]]);
+A(3,"Confidentiality",[[6,"7","What are Confidentiality and Availability in security?",3],[8,"7","Comment on CIA triad",3]]);
+A(3,"harder",[[6,"17a","Why is it harder to establish security in cloud?",6]]);
+A(3,"Infrastructure security",[[5,"8","What is Cloud Infrastructure Security?",3]]);
+A(3,"Trust in cloud computing",[[4,"7","Define trust; two conditions needed for trust to develop",3],[7,"8","Trust in cloud; phases of trust relationships",3],[8,"8","What is trust in cloud computing?",3]]);
+A(3,"Security monitoring & incident response",[[5,"18b","Security monitoring and incident response in detail",7],[8,"18b","Security monitoring and incident response in detail",7]]);
+A(3,"Privacy issues in cloud",[[5,"18a","Compare key privacy issues in cloud; steps to overcome them",7]]);
+A(4,"Google App Engine",[[5,"20b","Explain Google App Engine architecture",6],[7,"9","Summarize the PaaS facility offered by Google",3],[8,"10","How are Google Compute Engine and App Engine related?",3],[8,"19b","Explain Google App Engine architecture",7]]);
+A(4,"Amazon storage",[[4,"10","Differentiate storage services offered as IaaS and SaaS",3],[4,"19a","Distinguish between Amazon S3 and Amazon EBS",6],[5,"10","3 main storage types in AWS. Explain",3],[6,"9","Differentiate Amazon S3 and Amazon EBS",3],[6,"19b","Write notes on Amazon Elastic Block Storage",6],[7,"10","Differentiate Amazon S3 and Amazon EBS",3],[8,"9","How is the buffer used in Amazon Web Services?",3],[8,"20a","Illustrate the architecture of Amazon S3",8]]);
+A(4,"Amazon EC2",[[4,"20b","Explain Amazon EC2 and its instance types",8],[6,"19a","What is EC2? Explain its features",8],[7,"19b","Explain Amazon EC2 and its instance types",8]]);
+A(4,"Azure storage",[[4,"19b","Explain the four services offered by Azure storage",8],[5,"19b","Explain Azure Storage Services",7]]);
+A(4,"Azure platform",[[5,"20a","Microsoft Azure Cloud Computing Platform with neat diagram",8],[6,"20b","Architecture of Windows Azure; explain components",8],[8,"19a","Azure N-tier architecture with a diagram",7]]);
+A(4,"AWS ecosystem",[[8,"20b","Compare and contrast Amazon Web Services and Google Cloud",6]]);
+A(4,"Google Cloud storage",[[4,"9","Identify the SaaS offerings by Google",3],[4,"20a","Two popular services offered by Google IaaS",6],[6,"10","List the database services offered by Google cloud",3],[6,"20a","Discuss Google database services",6],[7,"20b","Summarize Google IaaS and SaaS offerings",8]]);
+A(4,"AWS Lambda",[[5,"9","What is AWS Lambda?",3]]);
+A(4,"Database services (Azure / AWS)",[[7,"19a","Explain the database services of Microsoft Azure",6],[7,"20a","Explain the database services of AWS",6]]);
+render=function(){
+ tabs.innerHTML="";
+ names.forEach(function(n,i){var b=document.createElement("button");b.textContent=n.split(" – ")[0];b.title=n;if(i===cur)b.className="on";b.onclick=function(){cur=i;render();window.scrollTo(0,0)};tabs.appendChild(b)});
+ var T=D[names[cur]],h="<h2 style='font-size:18px;margin:0 0 12px'>"+names[cur]+"</h2>";
+ function build(f,minC){
+  var g=[],rows=[],seen={};
+  T.forEach(function(t){var c=cnt(t),qs=t[1].filter(function(q){return f(q[3])});if(qs.length&&c>=minC)g.push({c:c,qs:qs})});
+  g.sort(function(a,b){return b.c-a.c||b.qs.length-a.qs.length});
+  g.forEach(function(x){x.qs.slice().sort(function(a,b){return R[b[0]]-R[a[0]]}).forEach(function(q){var k=q[2].toLowerCase();if(seen[k]){seen[k].e.push(q)}else{seen[k]={t:q[2],c:x.c,e:[q]};rows.push(seen[k])}})});
+  return rows}
+ function block(cls,title,sub,rows){
+  if(!rows.length)return "";
+  var mx=rows[0].c,s="";
+  rows.forEach(function(r,i){
+   var hot=r.c===mx&&r.c>1;
+   var bd=hot?"<span class='badge b-hot'>🔥 Most repeated · "+r.c+"/"+Y.length+" papers</span>":r.c>1?"<span class='badge b-rep'>Repeated · "+r.c+"/"+Y.length+" papers</span>":"<span class='badge b-one'>Asked once</span>";
+   var ch=r.e.slice().sort(function(a,b){return R[a[0]]-R[b[0]]}).map(function(q){return "<span class='yr'>"+Y[q[0]]+" · Q"+q[1]+" · "+q[3]+"m</span>"}).join("");
+   s+="<div class='row"+(hot?" hot":"")+"' style='--i:"+Math.min(i,14)+"'><div class='rn'>"+(i+1)+"</div><div class='rb'><div class='rt'>"+esc(r.t)+"</div><div class='rc'>"+ch+"</div></div><div class='rf'>"+bd+"</div></div>"});
+  return "<details class='blk "+cls+"'><summary><span>"+title+"<small>"+sub+"</small></span><em>"+rows.length+" questions</em></summary><div class='gb'>"+s+"</div></details>"}
+ h+=block("a","🟢 3-Mark Questions","Part A short answers, most repeated first",build(function(m){return m===3},only.checked?2:1));
+ h+=block("b","🔥 Important & Frequently Asked Questions","Long-answer questions (4+ marks) asked in 2 or more papers, most repeated first",build(function(m){return m!==3},2));
+ out.innerHTML=h||"<p>No questions.</p>";
+};
+var CL=render,subj=null,H1=document.querySelector("h1"),SUB=document.querySelector(".sub");
+var RL=["Dec 2022","May 2023","Dec 2023","May 2024","Nov 2024","Apr 2025","Nov 2025","May 2026"];
+// RE rows: [text, "letter+marks ..."]  a=Dec22 b=May23 c=Dec23 d=May24 e=Nov24 f=Apr25 g=Nov25 h=May26
+var RE={
+"Module 1 – Energy Scenario & Solar Radiation":[[["Need and significance of renewable energy; alternative fuels","b3 c3 e3 f3 g3"],["Define solar constant, air mass, irradiance / insolation","a3 b3 e3 h3"],["Define solar angles: declination, zenith, azimuth, tilt","f3 g3"]],[["Solar geometry terms (hour angle, zenith, azimuth, declination) with sketches","b7 c7 d6 e8 f8 g4 h8"],["Numerical: solar angles, angle of incidence, altitude / azimuth, day length, global radiation","a8 b7 c7 d8 h8"],["Pyranometer and pyrheliometer: working with sketches","b7 e6 f6 g10 h6"],["Greenhouse effect, GHGs and environmental impact of conventional energy","a6 e8 f6 g7"],["Classification of energy resources","c7 g7"],["Solar power for rural and agricultural sectors","c7 h6"],["Nuclear fission vs fusion","a6 d6"]]],
+"Module 2 – Solar Collectors, Storage & Photovoltaics":[[["Flat plate collector: working; comparison with concentrating / evacuated tube","c3 e3 h3"],["Solar pond: working","a3 g3"],["Sensible vs latent heat storage; thermochemical storage","b3 e3"],["Solar cell principle; current density and dark current","c3 d3"]],[["Concentrating collectors: parabolic trough, central receiver, CSP power","c8 d8 e8 f8 g7"],["Sensible, latent and thermochemical heat storage","b7 c7 d6 f6 g7"],["Solar PV cell: working, production, types, PV system components","b7 c6 f8 h8"],["Solar pond with sketch","b7 e10 f6"],["Flat plate collector: working, components, advantages and limitations","a8 d6 e6"],["Evacuated tube collector working","b7 h6"],["Solar absorption refrigeration system","a6 h8"]]],
+"Module 3 – Wind Energy":[[["Solidity, cut-in speed, cut-out speed, swept area","a3 c3 d3"],["Tip-speed ratio and power coefficient","f3 g3"],["Betz limit","b3 g3"],["Windrose diagram and its significance","b3 h3"]],[["Components of WECS / horizontal axis wind turbine with sketch","b7 c14 e8 f10 g10 h8"],["Types, classification and configurations of wind turbines","a6 b7 d4 e6 g9"],["Betz limit and momentum theory: derivation","a8 c7 e8 f14"],["Power available in wind / actual power: derivation and numericals","b7 d10 f4 g5"],["Horizontal vs vertical axis wind turbines","b7 d8 h6"],["Solidity, TSR, power coefficient, cut-in and cut-out speed","a6 e6 h8"]]],
+"Module 4 – Ocean & Geothermal Energy":[[["Principle of OTEC (cycles, advantages, limitations)","b3 c3 d3 e3 f3 g3 h3"],["Geothermal energy, gradient and resources","a3 c3 d3 g3 h3"]],[["Closed-cycle (Anderson) OTEC system with sketch","a8 b7 e5 f8 g7"],["Wave energy: factors and devices (e.g. Dolphin type)","b7 d7 f10 g7 h8"],["Vapour-dominated geothermal power plant","c7 f6 g7 h6"],["Open-cycle (Claude) OTEC system","b7 d7 e5 h8"],["Binary cycle geothermal power plant","a6 d6 e9"],["Liquid-dominated flashed steam system","b7 h6"],["Tidal power plant; Kerala environmental impact","a8 d8"]]],
+"Module 5 – Biomass, Biogas, Hydrogen & Economics":[[["Factors affecting biogas / biomass digester performance","a3 e3 h3"],["Hydrogen production methods (electrolysis, steam reforming) and storage","b3 d3 e3 h3"],["Biomass: why renewable; advantages and disadvantages","c3 f3 g3"],["Payback period, NPV and need for economic analysis","c3 f3"]],[["Fixed dome (Janata) biogas plant with sketch","d8 e8 f7 g10 h8"],["Payback, life cycle cost, annual savings: definitions; simple vs discounted","b7 c6 e6 f4 g4 h6"],["Biomass gasification and gasifiers (updraft vs downdraft)","b7 e8 f7 g6"],["Floating drum (KVIC) biogas plant","a10 b7 c7 d6"],["Payback numericals for equipment / solar PV system","c8 f10 h8"],["Bioethanol production (and biodiesel)","a6 e6 h6"],["Biomass resources and energy sources","a4 d6 g8"]]]
+};
+var rn=Object.keys(RE);
+var bk=document.createElement("button");bk.id="back";bk.textContent="\u2190 All subjects";bk.onclick=function(){subj=null;cur=0;render()};document.querySelector("header").appendChild(bk);
+function show(on,tg){document.querySelector(".bar").style.display=on?"":"none";document.querySelector(".mhead").style.display=on?"":"none";bk.style.display=on?"":"none";only.parentNode.style.display=tg?"":"none"}
+window.pick=function(s){subj=s;cur=0;render();window.scrollTo(0,0)};
+function RB(cls,title,sub,list){
+ var rows=list.map(function(r){var e=r[1].split(" ");return{t:r[0],e:e,c:e.length}}).sort(function(a,b){return b.c-a.c}),mx=rows[0].c,s="";
+ rows.forEach(function(r,i){
+  var hot=r.c===mx&&r.c>1,bd=hot?"<span class='badge b-hot'>Most repeated · "+r.c+"/"+RL.length+" papers</span>":r.c>1?"<span class='badge b-rep'>Repeated · "+r.c+"/"+RL.length+" papers</span>":"<span class='badge b-one'>Asked once</span>";
+  var ch=r.e.map(function(x){return "<span class='yr'>"+RL[x.charCodeAt(0)-97]+" · "+x.slice(1)+"m</span>"}).join("");
+  s+="<div class='row"+(hot?" hot":"")+"' style='--i:"+Math.min(i,14)+"'><div class='rn'>"+(i+1)+"</div><div class='rb'><div class='rt'>"+esc(r.t)+"</div><div class='rc'>"+ch+"</div></div><div class='rf'>"+bd+"</div></div>"});
+ return "<details class='blk "+cls+"'><summary><span>"+title+"<small>"+sub+"</small></span><em>"+rows.length+" questions</em></summary><div class='gb'>"+s+"</div></details>"}
+render=function(){
+ if(!subj){
+  H1.textContent="Previous-Year Question Bank";SUB.textContent="KTU 2019 scheme · choose a subject to start";tabs.innerHTML="";show(false,0);
+  out.innerHTML="<div class='sg'><button class='sc' onclick=\"pick('cloud')\"><span class='tag'>CST423</span><b>Cloud Computing</b><small>9 papers, Dec 2022 to Nov 2025 · all questions, module-wise</small></button><button class='sc' style='animation-delay:.08s' onclick=\"pick('re')\"><span class='tag'>MET445</span><b>Renewable Energy Engineering</b><small>8 papers, Dec 2022 to May 2026 · most important questions, module-wise</small></button></div>";return}
+ if(subj==="cloud"){H1.textContent="CST423 Cloud Computing";SUB.textContent="9 papers, Dec 2022 to Nov 2025 · most repeated questions first";show(true,1);CL();return}
+ H1.textContent="MET445 Renewable Energy Engineering";SUB.textContent="8 papers, Dec 2022 to May 2026 · hand-picked most important questions, most repeated first";show(true,0);
+ tabs.innerHTML="";
+ rn.forEach(function(n,i){var b=document.createElement("button");b.textContent="Module "+(i+1);b.title=n;if(i===cur)b.className="on";b.onclick=function(){cur=i;render();window.scrollTo(0,0)};tabs.appendChild(b)});
+ var m=RE[rn[cur]];
+ out.innerHTML="<h2 style='font-size:18px;margin:0 0 12px'>"+rn[cur]+"</h2>"+RB("a","3-Mark Questions","Part A: most important, most repeated first",m[0])+RB("b","Important & Frequently Asked Questions","Part B: most important long-answer questions, most repeated first",m[1]);
+};
+only.onchange=render;render();
+</script></body></html>
